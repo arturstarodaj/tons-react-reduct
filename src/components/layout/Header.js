@@ -1,0 +1,44 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
+
+const Header = props => {
+  const { branding } = props;
+  return (
+    <nav className="navbar navbar-expand-sm main-nav mb-3 py-0">
+      <div className="container-fluid">
+        <div className="container-nav">
+          <Link to="/" className="navbar-brand semi-bold flex-nav-left">
+            {branding}
+          </Link>
+            <SearchBar></SearchBar>
+          <div className="flex-nav-right">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  <i className="fas fa-home" /> Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  <i className="fas fa-question" /> About
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+Header.defaultProps = {
+  branding: 'My App'
+};
+
+Header.propTypes = {
+  branding: PropTypes.string.isRequired
+};
+
+export default Header;

@@ -1,0 +1,284 @@
+.main-nav {
+	height: 57px;
+	background-color: #232f3e;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 800;
+	border-bottom: 1px solid #e4e3df;
+}
+
+.main-nav a {
+	color: #ffffff;
+}
+
+.navbar-brand {
+	color: #ffffff;
+}
+.navbar-brand:hover {
+	color: #ff9900;
+}
+
+.semi-bold {
+	font-weight: 600;
+}
+.nav-search-field {
+	position: relative;
+	height: 35px;
+	background: #fff;
+}
+
+#searchbar {       
+	display: flex;
+	width: 100%;
+	line-height: 15px;
+	padding: 6px 10px 6px 0;
+	margin: 0;
+	border: 0;
+	height: 33px;
+	font-family: arial,sans-serif;
+	font-size: 15px;
+	background: 0 0;
+	color: #111;
+	outline: 0;
+	-webkit-appearance: none;
+	box-shadow: none;
+	text-indent: 8px;
+}
+
+.nav-search-dropdown {
+	position: absolute;
+	display: block;
+	top: -1px;
+	left: 0;
+	height: 35px;
+	width: auto;
+	font-family: arial,sans-serif;
+	outline: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	visibility: visible;
+	border: 0;
+	line-height: 35px;
+}
+
+.nav-input {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	outline: 0;
+	color: #fff;
+	background: 0 0;
+	border: none;
+	text-indent: -1000px;
+	line-height: 1px;
+}
+
+.nav-search-submit {
+	background-color: #febd69;
+	background-image: none;
+	border: none;
+	width: 40px;
+	text-align: center;
+	height: 35px;
+	font-size: 20px;
+	padding-top: 2px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.nav-searchbar {
+	display: flex;
+	position: relative;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	border-radius: 0\9;
+	width: 100%;
+	overflow: hidden;
+	margin-top:1px;
+}
+.nav-left {
+	position: relative;
+	height: 35px;
+	order:1;
+	background: #f3f3f3;
+	font-size: 14px;
+	padding: 6px;
+	color: #777777;
+	border-right: 1px solid #d4d4d4;
+}
+.nav-fill {
+	flex:1;
+	order:2;
+	position: relative;
+}
+.nav-right {
+	order:3;
+}
+.flex-nav-left{
+	flex: 1;
+	order: 1;
+	width:20%;
+	padding-right: 10px;
+}
+.flex-nav-fill{
+	flex: 1;
+	order: 2;
+}
+.flex-nav-right{
+	flex: 1;
+	order: 3;
+	width:20%;
+	padding-left:10px;
+}
+.flex-nav-right .navbar-nav {
+	float:right;
+}
+
+.nav-search-scope {
+	background-color: #f3f3f3;
+	background-image: none;
+	border-left: 1px solid #f3f3f3;
+	border-top: 1px solid #f3f3f3;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.product-boxes {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap; 
+}
+
+.product-overview-box {
+	flex: 1 0 20%;                
+	margin: 10px 5px;    
+	transition: background-color 150ms ease-in;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 0;
+}
+.product-overview-box:hover {
+	cursor: pointer;
+	background-color: #f7f7f7;
+	text-decoration: none;
+	
+}
+.product-overview-box small {
+	color: #757575;
+	font-size: 14px;
+	text-align: center;
+}
+.image-wrapper {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+.product-overview-box  h5 {
+	font-size: 1.1em;
+	margin-bottom: 0;
+	color: #212529;
+}
+.hover-zoom {
+	transition: all 0.3s ease-in-out;
+	background-size: 90%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: gray;
+	position: relative;
+  }
+  .hover-zoom:hover {
+	background-size:110%;
+	-webkit-transform: rotate(15deg);
+	-ms-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+  }
+  .small {
+	color: #247bbd;
+	font-size: 0.9rem;
+	font-weight: 600;
+  }
+
+  .navbar{
+	padding-left: 0px;
+  }  
+  .container-fluid { padding-left:25px; padding-right:25px;}
+  .container-nav { display:flex; width:100%;}
+
+  .product-detail .image-wrapper-large {
+	  flex: 40%;
+	  background-size: contain;
+	  background-repeat: no-repeat;
+  }
+  
+  .product-detail .product-detail-desc{
+	flex: 60%;
+}
+  .product-detail {
+	display: flex;
+	min-height: 450px;
+  }
+  .publisher{
+	color: #797979;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+	display: block;
+  }
+  .button {
+	backface-visibility: hidden;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	white-space: nowrap;
+	background: #febd69;
+	border-radius: 10px 2px 4px 10px;
+	border: 0px solid #444;
+	border-width: 0px 0px 0px 0px;
+	padding: 8px 20px 8px 50px;
+	font-size: 15px;
+	font-weight:600;
+	font-style: normal;
+	float: right;
+	margin-top: 20px;
+  }
+  .button > div {
+	color: #999;
+	font-size: 10px;
+	font-style: normal;
+	text-align: center;
+	margin: 0px 0px 0px 0px
+  }
+  .button > i {
+		font-size: 1em;
+		background: #fff;
+		border-radius: 100px;
+		border: 4px solid #febd69;
+		border-width: 4px 4px 4px 4px;
+		padding: 11px 12px 11px 12px;
+		margin: 6px 6px 6px 6px;
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		bottom: -10px
+  }
+  .button > .ld {
+	font-size: initial
+  }
+  ul.predictions{
+		position: absolute;
+		top: 43px;
+    margin-left: 50px;
+	}
+	ul.predictions a {
+		color: initial;
+	}
