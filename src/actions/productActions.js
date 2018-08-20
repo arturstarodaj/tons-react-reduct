@@ -1,15 +1,16 @@
 import {
-  GET_PODUCTS,
+  GET_PRODUCTS,
   GET_PRODUCTS_BY_NAME,
   GET_PRODUCT_BY_ID,
-  DESTROY_PREDICTIONS
+  DESTROY_PREDICTIONS,
+  SEARCH_PRODUCTS_BY_NAME
 } from './types';
 import axios from 'axios';
 
 export const getProducts = () => async dispatch => {
   const res = await axios.get('https://cors-anywhere.herokuapp.com/https://www.datakick.org/api/items');
   dispatch({
-    type: GET_PODUCTS,
+    type: GET_PRODUCTS,
     payload: res.data
   });
 };
@@ -39,4 +40,14 @@ export const destroyPredictions = name => dispatch => {
     type: DESTROY_PREDICTIONS
   });
 };
+
+export const searchProductsByName = name => async dispatch => {
+  const res = await axios.get(
+    `https://cors-anywhere.herokuapp.com/https://www.datakick.org/api/items?query=${name}`
+  );
+  dispatch({
+    type: SEARCH_PRODUCTS_BY_NAME,
+    payload: res.data
+  });
+}
 

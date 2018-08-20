@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import ProductOverview from './ProductOverview';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getProducts } from '../../actions/productActions';
+import { getProducts, searchProductsByName } from '../../actions/productActions';
 
 class ProductsList extends Component {
   componentDidMount() {
-    this.props.getProducts();
+    const { name } = this.props.match.params;
+    name ? this.props.searchProductsByName(name) :  this.props.getProducts();
   }
 
   render() {
@@ -28,7 +29,9 @@ class ProductsList extends Component {
 
 ProductsList.propTypes = {
   products: PropTypes.array.isRequired,
-  getProducts: PropTypes.func.isRequired
+  getProducts: PropTypes.func.isRequired,
+  searchProductsByName: PropTypes.func.isRequired,
+  name: PropTypes.string
 };
 
 const mapStateToProps = state => ({
@@ -37,5 +40,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getProducts }
+  { getProducts, searchProductsByName }
 )(ProductsList);
