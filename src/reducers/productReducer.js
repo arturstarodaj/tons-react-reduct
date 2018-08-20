@@ -1,8 +1,9 @@
 import {
-  GET_PODUCTS,
+  GET_PRODUCTS,
   GET_PRODUCT_BY_ID,
   GET_PRODUCTS_BY_NAME,
-  DESTROY_PREDICTIONS
+  DESTROY_PREDICTIONS,
+  SEARCH_PRODUCTS_BY_NAME
 } from '../actions/types';
 
 const initialState = {
@@ -13,7 +14,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_PODUCTS:
+    case GET_PRODUCTS:
       return {
         ...state,
         products: action.payload
@@ -27,6 +28,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         predictions: action.payload
+      };
+    case SEARCH_PRODUCTS_BY_NAME:
+      return {
+        ...state,
+        predictions: [],
+        products: action.payload
       };
     case DESTROY_PREDICTIONS:
       return {

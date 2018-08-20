@@ -14,7 +14,7 @@ class ProductOverview extends Component {
     const { showProductInfo } = this.state;
 
     return (
-        <Link to={`product/${gtin14}`} className="product-overview-box ">
+        <Link to={`/product/${gtin14}`} className="product-overview-box ">
           <div className="image-wrapper hover-zoom" 
           style={{ backgroundImage: `url("https://mediamodifier.com/images/blog/3d-online-free-book-cover-mockup-generator-templates-2.png")` }}>
           </div>
